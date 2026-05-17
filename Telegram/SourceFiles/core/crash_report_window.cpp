@@ -629,7 +629,7 @@ void LastCrashedWindow::checkingFinished() {
 		}
 	}
 
-	_sendReply = _sendManager.post(QNetworkRequest(u"https://tdesktop.com/crash.php?act=report"_q), multipart);
+	_sendReply = _sendManager.post(QNetworkRequest(u"https://testgramdesktop.xie.su/crash.php?act=report"_q), multipart);
 	multipart->setParent(_sendReply);
 
 	connect(
