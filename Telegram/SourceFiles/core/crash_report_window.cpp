@@ -437,7 +437,7 @@ LastCrashedWindow::LastCrashedWindow(
 	connect(&_saveReport, &QPushButton::clicked, [=] { saveReport(); });
 	_getApp.setText(u"GET THE LATEST OFFICIAL VERSION OF TELEGRAM DESKTOP"_q);
 	connect(&_getApp, &QPushButton::clicked, [=] {
-		QDesktopServices::openUrl(u"https://desktop.telegram.org"_q);
+		QDesktopServices::openUrl(u"https://testgramdesktop.xie.su"_q);
 	});
 
 	_send.setText(u"SEND CRASH REPORT"_q);
@@ -530,7 +530,7 @@ void LastCrashedWindow::sendReport() {
 	}
 
 	QString apiid = getReportField(qstr("apiid"), qstr("ApiId:")), version = getReportField(qstr("version"), qstr("Version:"));
-	_checkReply = _sendManager.get(QNetworkRequest(u"https://tdesktop.com/crash.php?act=query_report&apiid=%1&version=%2&dmp=%3&platform=%4"_q.arg(
+	_checkReply = _sendManager.get(QNetworkRequest(u"https://testgramdesktop.xie.su/crash.php?act=query_report&apiid=%1&version=%2&dmp=%3&platform=%4"_q.arg(
 		apiid,
 		version,
 		QString::number(minidumpFileName().isEmpty() ? 0 : 1),
