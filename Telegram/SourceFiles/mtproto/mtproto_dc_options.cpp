@@ -28,8 +28,8 @@ struct BuiltInDc {
 	int port;
 };
 
-#define IpV4 "31.59.46.6"
-#define IpV6 "31.59.46.6"
+#define IpV4 "94.183.233.59"
+#define IpV6 "94.183.233.59"
 #define IpV4Port 20443
 #define IpV4Port2 20443
 #define IpV6Port 20443
